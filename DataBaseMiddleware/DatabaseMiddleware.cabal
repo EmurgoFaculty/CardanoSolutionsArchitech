@@ -1,0 +1,55 @@
+cabal-version:      2.4
+name:               DatabaseMiddleware
+version:            1.1.0.0
+synopsis:           Database Access with Persistent ORM demo
+homepage:           https://www.vortecsla.com/plutus
+license:            MIT
+license-file:       LICENSE
+author:             Roberto J. Cerrud
+maintainer:         roberto@emurgo.io
+category:           Education
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:    TestDAL
+                                                                  
+    build-depends:      attoparsec 
+                      , base ^>=4.14.1.0
+                      , blaze-html
+                      , blaze-markup
+                      , aeson -any
+                      , bytestring -any
+                      , base-compat
+                      , containers -any
+                      , data-default
+                      , directory 
+                      , freer-extras -any
+                      , http-media
+                      , lucid
+                      , mtl
+                      , monad-logger
+                      , persistent
+                      , persistent-sqlite
+                      , persistent-postgresql
+                      , persistent-template
+                      , playground-common -any
+                      , plutus-contract -any
+                      , plutus-ledger -any
+                      , plutus-ledger-api -any
+                      , plutus-ledger-constraints -any
+                      , plutus-script-utils
+                      , plutus-tx -any
+                      , plutus-tx-plugin -any
+                      , text -any
+                      , time -any
+                      , lens -any
+                      , serialise
+                      , servant
+                      , servant-server
+                      , string-conversions
+                      , wai
+                      , warp
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+    ghc-options:         -Wall -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -fno-spec-constr -fno-specialise
